@@ -1,0 +1,120 @@
+.facebook-events {
+  width: 100vw;
+  height: 100vh;
+  font-size: 4vh;
+  color: white;
+  line-height: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+.facebook-events .event-map {
+  background-size: cover;
+  width: 35vw;
+  height: 100%;
+  float: left;
+  display: inline-block;
+  color: black;
+}
+.facebook-events .event-details {
+  background: url('../assets/images/facebook.jpeg');
+  background-size: cover;
+  background-position: center;
+  width: 65vw;
+  height: 100vh;
+  display: inline-block;
+  float: left;
+  padding: 1em 2em;
+  border-left: 0.2em solid #3b5998;
+  text-shadow: 0.1em 0.1em 0.3em rgba(0, 0, 0, .5);
+}
+.facebook-events .event-top {
+  position: relative;
+  margin-top: 1.5em;
+}
+.facebook-events .event-top .event-calendar {
+  position: absolute;
+  left: 0;
+  border: 0.1em solid white;
+  border-radius: 0.5em;
+  line-height: 0.9em;
+}
+.facebook-events .event-top .event-calendar h2 {
+  font-size: 1.6em;
+  text-align: center;
+  padding: 0.2em 0.3em;
+  line-height: 1em;
+}
+.facebook-events .event-top .event-name {
+  position: absolute;
+  margin-left: 5.5em;
+}
+.facebook-events .event-top .event-name h1 {
+  font-size: 1.6em;
+  line-height: 1.1em;
+}
+.facebook-events .start-time-div, .facebook-events .end-time-div {
+  float: left;
+  width: 50%;
+  padding-right: 0.2em;
+}
+.facebook-events .event-middle {
+  margin-top: 7.5em;
+}
+.facebook-events .event-middle .event-date, .facebook-events .event-middle .event-location, .facebook-events .event-middle .event-id {
+  margin-bottom: 1em;
+  position: relative;
+}
+.facebook-events .event-middle i {
+  position: absolute;
+  left: 0;
+  top: -0.1em;
+  font-size: 1.5em;
+}
+.facebook-events .event-middle .icon-clock-2 {
+  top: 0.5em;
+}
+.facebook-events .event-middle p, .facebook-events .event-middle h3 {
+  margin-left: 2.5em;
+}
+.facebook-events .event-middle h4 {
+  font-size: 0.6em;
+  margin-left: 4.2em;
+}
+.facebook-events .event-bottom {
+  position: relative;
+}
+.facebook-events .event-bottom i {
+  position: absolute;
+  left: 0.1em;
+  top: 0.8em;
+  font-size: 1.2em;
+}
+.facebook-events .event-bottom p {
+  font-size: 0.7em;
+  line-height: 1.3em;
+  margin-left: 3.6em;
+  text-align: justify;
+}
+.facebook-events .event-id {
+  margin-left: 2.5em;
+}
+.facebook-events .event-id p {
+  font-size: 0.7em;
+}
+.facebook-events .event-id h2 {
+  font-size: 0.6em;
+  margin-top: -0.5em;
+}
+.facebook-events .facebook-logo {
+  position: absolute;
+  bottom: 1em;
+  right: 1.6em;
+  background: rgba(59, 89, 152, 0.59);
+  padding: 0.2em 0.8em;
+  border-radius: 0.3em;
+}
+.facebook-events .facebook-logo h3 {
+  font-size: 1em;
+}
+.facebook-events .facebook-logo span {
+  font-weight: 700;
+}

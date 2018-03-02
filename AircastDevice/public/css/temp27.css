@@ -1,0 +1,138 @@
+.facebook-post-loader {
+  background: url("/assets/facebook-loader.png");
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+}
+.facebook-post-loader .loader {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.facebook-post {
+  width: 100vw;
+  height: 100vh;
+  font-size: 4vh;
+  position: relative;
+}
+.facebook-post .fadeImage {
+  animation: fadeInImage 3s forwards;
+}
+.facebook-post .facebook-mask {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.facebook-post .facebook-mask img {
+  width: 100%;
+}
+.facebook-post .facebook-image-background {
+  background-image: url(/assets/facebook-post-cover.png);
+  background-position: center;
+  background-size: cover;
+  filter: blur(35px);
+  transform: scale(1.1);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.facebook-post .facebook-post-left {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 65vw;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facebook-post .facebook-post-left img {
+  width: 25em;
+}
+.facebook-post .facebook-post-right {
+  width: 35vw;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  padding-right: 1em;
+  padding-left: 0.5em;
+  height: 100vh;
+  text-align: center;
+  color: #a19d7f;
+}
+.facebook-post .facebook-post-right .facebook-overlay {
+  width: 10em;
+  text-align: center;
+  margin-top: 2em;
+}
+.facebook-post .facebook-post-right .facebook-post-top {
+  height: 35vh;
+  position: relative;
+  margin-top: -0.4em;
+  padding-right: 0.5em;
+}
+.facebook-post .facebook-post-right .facebook-post-top h2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 2.5em;
+  font-weight: 700;
+  z-index: -1;
+  margin-top: -0.8em;
+}
+.facebook-post .facebook-post-right .facebook-post-top p {
+  font-family: 'Avenir';
+}
+.facebook-post .facebook-post-right .facebook-post-top p span {
+  font-weight: 700;
+}
+.facebook-post .facebook-post-right .facebook-post-top img {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+}
+.facebook-post .facebook-post-right .facebook-post-top h3 {
+  font-family: 'BebasNeue';
+  font-size: 1.5em;
+  border-bottom: 0.05em solid #a19d7f;
+  padding-bottom: 0.1em;
+  margin-bottom: 0.2em;
+}
+.facebook-post .facebook-post-right .facebook-post-caption {
+  text-align: left;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  font-family: 'Avenir';
+}
+.facebook-post .facebook-post-right .facebook-post-caption p {
+  padding-right: 1em;
+  padding-left: 0.5em;
+  word-wrap: break-word;
+  width: 100%;
+}
+.facebook-post .facebook-post-right .facebook-post-reactions {
+  display: flex;
+  position: absolute;
+  bottom: 1em;
+  font-family: 'BebasNeue';
+}
+.facebook-post .facebook-post-right .facebook-post-reactions .likes, .facebook-post .facebook-post-right .facebook-post-reactions .heart, .facebook-post .facebook-post-right .facebook-post-reactions .wow, .facebook-post .facebook-post-right .facebook-post-reactions .haha {
+  padding-right: 0.5em;
+}
+.facebook-post .facebook-post-right .facebook-post-reactions img {
+  position: absolute;
+  width: 1.2em;
+}
+.facebook-post .facebook-post-right .facebook-post-reactions span {
+  margin-left: 1.2em;
+  font-size: 1.2em;
+}
+.facebook-post .facebook-post-right img {
+  width: 2em;
+}

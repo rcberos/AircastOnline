@@ -1,0 +1,58 @@
+html, body {
+  height: 100%; }
+
+.ng-scope {
+  height: 100%; }
+
+.line-icon {
+  font-family: "streamline-30px";
+}
+
+.weather {
+  background: url("/images/qc.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /*height: 100%;*/
+  color: white; }
+  .weather .head {
+    padding: 100px;
+    position: relative;
+    text-align: right; }
+  .weather .col-sm-3 {
+    border-right: 1px solid white;
+    margin: 10px 0; }
+  .weather .footer {
+    position: absolute;
+    width: 102%;
+    bottom: 0; }
+  .weather .row {
+    background: rgba(0, 0, 0, 0.4); }
+  .weather .weather-icon {
+    font-size: 120px;
+    top: -24px;
+    position: absolute;
+    right: 1.9em; }
+  .weather h3 {
+    display: inline-block;
+    font-size: 100px;
+    margin: 0; }
+  .weather h5 {
+    font-weight: 100;
+    font-size: 23px; }
+  .weather .align-right {
+    text-align: right;
+    position: relative; }
+  .weather .align-center {
+    text-align: center; }
+  .weather p {
+    font-size: 40px;
+    /*line-height: 37px;*/
+    text-align: right; }
+  .weather h6 {
+    font-weight: 100;
+    font-size: 21px; }
+  .weather i {
+    display: block;
+    font-size: 40px; }

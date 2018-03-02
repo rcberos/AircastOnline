@@ -1,0 +1,49 @@
+    <div class="currency-portrait">
+        
+        <div class="currency-title">
+         <h1>Currency Exchange Rates</h1>   
+        </div>
+
+        <div class="currency-content">
+
+            <div class="euro animated fadeInUp delay-animation-1">
+                <div class="currency-top">
+                    <img src="assets/currency-euro.png">
+                    <span>Euro</span>
+                </div>
+                <div class="currency-middle">
+                    <h2>{{ todayEuro }}</h2>
+                </div>
+                <div class="currency-bottom">
+                    <img ng-src="{{ signs.euro }}" class="currency-footer-signs">
+                </div>
+            </div>
+
+            <div class="usd animated fadeInUp delay-animation-3">
+                <div class="currency-top">
+                    <img src="assets/currency-usd.png">
+                    <span>US Dollar</span>
+                </div>
+                <div class="currency-middle">
+                    <h2>{{ todayUsd }}</h2>
+                </div>
+                <div class="currency-bottom">
+                    <img ng-src="{{ signs.usd }}" class="currency-footer-signs">
+                </div>
+            </div>
+
+            <div class="yen animated fadeInUp delay-animation-5">
+                <div class="currency-top">
+                    <img src="assets/currency-yen.png">
+                    <span>JPY</span>
+                </div>
+                <div class="currency-middle">
+                    <h2>{{ todayYen }}</h2>
+                </div>
+                <div class="currency-bottom">
+                    <img ng-src="{{ signs.yen }}" class="currency-footer-signs">
+                </div>
+            </div>
+        </div>
+        
+    </div>

@@ -1,0 +1,17 @@
+<video ng-style="temp5VideoStyle" id='temp5Video' ng-src="{{temp5Src.video}}" ui-event="{ ended : 'temp5VideoEnd()'}" ></video>
+<!-- <img ng-style="temp5BottomStyle" ng-src="{{temp5Src.bottom}}"> -->
+<div ng-style="temp5BottomStyle"></div>
+
+<div ng-style="temp5Side1Style">
+	<div class="wi" ng-style="temp5WeatherMainIcon" ng-class="temp5WeatherNow.icon"></div><br>
+	<div ng-style="temp5WeatherMainText">
+		{{temp5WeatherNow.description}}, {{(temp5WeatherNow.temp)}}
+	</div>
+	<div ng-style="temp5WeatherForcast">Forecast</div>
+	<div ng-style="temp5WeatherForcast1">{{temp5WeatherFuture1.time}}</div><div ng-style="temp5WeatherForcast11"><i class="wi" ng-class="temp5WeatherFuture1.icon">{{temp5WeatherFuture1.temp}}</i></div>
+	<div ng-style="temp5WeatherForcast2">{{temp5WeatherFuture2.time}}</div><div ng-style="temp5WeatherForcast22"><i class="wi" ng-class="temp5WeatherFuture2.icon">{{temp5WeatherFuture2.temp}}</i></div>
+	<div ng-style="temp5WeatherForcast3">{{temp5WeatherFuture3.time}}</div><div ng-style="temp5WeatherForcast33"><i class="wi" ng-class="temp5WeatherFuture3.icon">{{temp5WeatherFuture3.temp}}</i></div>
+</div>
+<!-- <img ng-style="temp5Side1Style" ng-src="{{temp5Src.side1}}"> -->
+<img ng-style="temp5Side2Style" ng-src="{{temp5Src.side2}}">
+<!-- <img ng-style="temp5Side3Style" ng-src="{{temp5Src.side3}}"> -->

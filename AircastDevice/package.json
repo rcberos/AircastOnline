@@ -1,0 +1,22 @@
+{
+  "name": "aircastdevice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Randy Beros <rcberos@up.edu.ph>",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "download-file": "^0.1.5",
+    "express": "^4.15.4",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "needle": "^2.0.0",
+    "path": "^0.12.7",
+    "request": "^2.81.0",
+    "twit": "^2.2.9"
+  }
+}

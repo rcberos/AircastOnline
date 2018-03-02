@@ -1,0 +1,77 @@
+    <div ng-show="currentTemp == 'templates/temp13.html'">
+
+      <div class="currency">
+        <div class="currency-rate">
+            <div class="yen animated fadeInUp delay-animation-3">
+                <div class="yen-header">
+                  <div class="header-text"><p>{{todayYen}}</p></div>
+                   <div class="header-current header-current-first"><h1>{{  yen }}</h1></div>
+                    <div class="yen-sign">
+                        <img src="assets/stocks-yen-sign.png">
+                    </div>    
+                </div>
+                <div class="currency-container">
+                     <div class="currency-header">
+                        <img src="assets/currency-yen.png">
+                        <img src="assets/currency-phil.png">
+                    </div>
+                    <div class="currency-body">
+                        <h2>{{ yesterday.yen }}</h2>
+                        <p>PHP</p>
+                    </div>
+                    <div class="currency-footer">
+                        <img class="currency-footer-signs" ng-src="{{ signs.yen }}">
+                    </div>               
+                </div>
+            </div>
+            
+            <div class="usd animated fadeInUp delay-animation-4">
+                <div class="usd-header">
+                  <div class="header-text"><p>{{todayUsd }}</p></div>
+                   <div class="header-current header-current-center"><h1>{{ usd  }}</h1></div>
+                    <div class="usd-sign">
+                        <img src="assets/stocks-usd-sign.png">
+                    </div>    
+                </div>
+                <div class="currency-container">
+                     <div class="currency-header">
+                        <img src="assets/currency-usd.png">
+                        <img src="assets/currency-phil.png">
+                    </div>
+                    <div class="currency-body">
+                         <h2>{{ yesterday.usd }}</h2>
+                        <p>PHP</p>                   
+                    </div>
+                    <div class="currency-footer">
+                        <img class="currency-footer-signs" ng-src="{{ signs.usd }}">
+                    </div>               
+                </div>
+            </div>
+            
+            
+            <div class="euro animated fadeInUp delay-animation-5">
+                <div class="euro-header">
+                  <div class="header-text"><p>{{ todayEuro }}</p></div>
+                   <div class="header-current"><h1>{{ euro }}</h1></div>
+                    <div class="euro-sign">
+                        <img src="assets/stocks-euro-sign.png">
+                    </div>    
+                </div>
+                <div class="currency-container">
+                     <div class="currency-header">
+                        <img src="assets/currency-euro.png">
+                        <img src="assets/currency-phil.png">
+                    </div>
+                    <div class="currency-body">
+                        <h2>{{ yesterday.euro }}</h2>
+                        <p>PHP</p>
+                    </div>
+                    <div class="currency-footer">
+                        <img class="currency-footer-signs" ng-src="{{ signs.euro }}">
+                    </div>               
+                </div>
+            </div>
+        </div>
+    </div>
+      
+    </div> <!-- end of temp 13 -->

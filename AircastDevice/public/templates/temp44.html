@@ -1,0 +1,43 @@
+    </div> <!-- end of temp 11 -->
+
+    <div ng-show="currentTemp == 'templates/temp12.html'">
+
+
+            <div class="weather-loader">
+                <div class="loader"></div>
+            </div>
+
+            <div class="weather" ng-style="{'background-image': 'url(' + weather_background + ')'}">
+                <div class="head">
+
+            <!--         <audio controls autoplay hidden>
+                      <source src="assets/images/sunny.mp3" type="audio/mpeg">
+                    </audio>
+             -->
+                    <div class="align-left">
+                        <i class="line-icon weather-icon animated" ng-class="now_weather.animation"></i>
+                        <h3 class="animated flipInY delay-animation-5">{{now_weather.temp}}°C</h3>
+                    </div>
+
+                       <div class="align-right animated fadeInUp delay-animation-9">
+            <!--               <p>"Let your smile change the world but don't let the world change your smile."</p>-->
+                       </div>   
+
+                        <p class="weather-location animated slideInRight delay-animation-1 duration-2">Today, {{ now_weather.location }} </p>
+                        <p class="weather-date animated slideInLeft delay-animation-2 duration-2">{{ now_weather.currentDate }}</p>  
+
+                </div>
+                <div id="footer-container">
+                    <div id="footer-background" ng-style="{'background-image': 'url(' + weather_background + ')'}"></div>
+                    <div class="row footer fadeInImage">
+                        <div class="col-sm-3 align-center" ng-if="$index >= 1" ng-repeat="c in conditions | limitTo: 5">
+                            <h6 class="animated fadeInUp delay-animation-4 duration-2">{{c.day}}</h6>
+                            <i class="line-icon blue animated fadeInUp delay-animation-5 duration-2" ng-class="c.icon"></i>
+                            <h5 class="animated fadeInUp delay-animation-6 duration-2">{{c.temp | number:0}}°</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div> <!-- end of temp 12 -->

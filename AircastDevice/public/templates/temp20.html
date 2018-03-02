@@ -1,0 +1,61 @@
+<div class="twitter-portrait">
+    
+    <div class="twitter-header">
+        <div class="twitter-header-bg">
+            <img src="assets/twitter-icon.png">
+            <h1>Top Trending Topics</h1>
+            <!-- <h2>{{ topHashtag }}</h2> -->
+        </div>
+    </div>
+    <div class="loader"></div>
+    <div class="twitter-body">
+        
+         <h1 class="hashtag-overlay">{{ topHashtag }}</h1>       
+    
+        <div class="tweet animated" id="currentTweet">
+            <div class="tweet-upper">
+                <img src="{{ tweet.user.profile_image_url }}" >
+                <h3>{{ name }}</h3>
+                <h4>@{{ username }}</h4>
+            </div>
+            <div class="tweet-body">
+                <p>{{ tweetText }}</p>
+            </div>
+            <div class="tweet-footer clearfix">
+                   <div class="float-left">
+                        <img src="assets/twitter-retweet.png">
+                        <span>{{ tweet.retweet_count }}</span>
+                        <img src="assets/twitter-favorite.png">
+                        <span>{{ tweet.favorite_count }}</span>   
+                   </div>
+                    <div class="float-right">
+                        <p>{{ tweetDate }}</p>    
+                    </div> 
+            </div>
+        </div>
+        
+        <div class="tweet tweet-second animated" id="secondTweet">
+            <div class="tweet-upper">
+                <img src="{{ nextTweet.user.profile_image_url }}" >
+                <h3>{{ nextTweet.user.name }}</h3>
+                <h4>@{{ nextTweet.user.screen_name }}</h4>
+            </div>
+            <div class="tweet-body">
+                <p>{{ nextTweetText }}</p>
+            </div>
+            <div class="tweet-footer clearfix">
+                   <div class="float-left">
+                        <img src="assets/twitter-retweet.png">
+                        <span>{{ nextTweet.retweet_count }}</span>
+                        <img src="assets/twitter-favorite.png">
+                        <span>{{ nextTweet.favorite_count }}</span>   
+                   </div>
+                    <div class="float-right">
+                        <p>{{ nextTweetDate }}</p>    
+                    </div> 
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

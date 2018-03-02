@@ -1,0 +1,41 @@
+  <div ng-show="currentTemp == 'templates/temp16.html'">
+
+    <div class="upcoming-movies">
+  
+      <div class="movie-bg" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.3)), url(' + backdrop_path + ')'}"></div>
+
+      <div class="movie-logo animated fadeInUp delay-animation-5">
+        <img src="/assets/logo-tmdb.png">    
+      </div>
+
+      <div class="movie-content">
+        
+        <div class="movie-left">
+          <div class="movie-poster animated bounceInDown">
+            <img ng-src="{{poster_path}}" />
+          </div>  
+        </div>
+        <div class="movie-right">
+          <div class="movie-title animated {{ animation }} delay-animation-1">
+            <h3>{{ movieslist }}</h3>
+          </div>
+          <div class="movie-title animated {{ animation }} delay-animation-3">
+            <h1>{{ title }}</h1>
+          </div>
+          <div class="movie-description animated {{ animation }} delay-animation-4">
+            <h4>Synopsis:</h4>
+            <p>{{ description | cut:true:250:' ...'  }}</p>
+          </div>
+          <div class="movie-ratings animated {{ animation }} delay-animation-5">
+            <h2> <i class="fa fa-star-half-o" aria-hidden="true"></i> {{ vote_average }}</h2>
+          </div>
+          <div class="movie-release-date animated {{ animation }} delay-animation-6">
+            <h2> <i class="fa fa-calendar" aria-hidden="true"></i> {{ release_date }}</h2>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    
+  </div> <!-- end of temp 16 -->

@@ -1,0 +1,40 @@
+
+<div class="facebook-post">
+	<div class="facebook-mask"><img src="assets/facebook-mask.png"></div>
+	<div class="facebook-image-background" ng-style="{'background-image': 'url(' + info.full_picture + ')'}"></div>
+	<div class="facebook-post-left">
+		<div class="facebook-image">
+			<img class="animated rotateInUpLeft facebook-image-pic" ng-src="{{info.full_picture}}">
+		</div>	
+	</div>
+	<div class="facebook-post-right">
+		<img src="assets/facebook-logo-overlay.png" class="facebook-overlay">
+		<div class="facebook-post-top animated bounceInDown">
+			<img ng-src="{{info.page_picture}}">
+			<h3 ng-cloak>{{info.page_name}}</h3>
+			<p ng-cloak><span>{{info.page_likes}}</span> page likes</p>
+		</div>
+		<div class="facebook-post-caption animated bounceInUp">
+			<p ng-cloak>{{info.message | cut:true:200:' ...' }}</p>
+		</div>
+		<div class="facebook-post-reactions animated bounceInUp delay-animation-1">
+			<div class="likes" ng-hide="info.reactions.like == 0">
+				<img src="assets/fb-like-icon.png">
+				<span ng-cloak>{{info.reactions.like}}</span>
+			</div>
+			<div class="heart" ng-hide="info.reactions.love == 0">
+				<img src="assets/fb-love-icon.png">
+				<span ng-cloak>{{info.reactions.love}}</span>
+			</div>
+			<div class="wow" ng-hide="info.reactions.wow == 0">
+				<img src="assets/fb-wow-icon.png">
+				<span ng-cloak>{{info.reactions.wow}}</span>
+			</div>
+			<div class="haha" ng-hide="info.reactions.haha == 0">
+				<img src="assets/fb-haha-icon.png">
+				<span ng-cloak>{{info.reactions.haha}}</span>
+			</div>
+		</div>
+	</div>
+
+</div>

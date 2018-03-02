@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-$route-service-production</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+
+  <link rel="stylesheet" type="text/css" href="css/symbolset/line_fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/weather.css">
+
+  
+
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-ui-bootstrap.min.js"></script>
+  <script src="scripts/angular-ui-bootstrap-tpls.min.js"></script>
+
+
+
+
+  <script type="text/javascript" src="scripts/typed.js"></script>
+
+  <script src="scripts/allTemp.js"></script>
+
+  <script src="scripts/RpiAngular.js"></script>
+  <script type="text/javascript" src="scripts/angular-ui-event/dist/event.js"></script>
+     <script type="text/javascript" src="scripts/moment.js"></script>
+
+  <script src="scripts/angular-animate.js"></script>
+  <script src="scripts/require.js"></script>
+
+</head>
+<body ng-app="MainModule" ng-controller="MainController">
+
+  <div ng-show="currentTemp == 'templates/temp1.html'">
+    <video ng-style="temp1VideoStyle" id='temp1Video' ui-event="{ ended : 'temp1VideoEnd()'}" muted></video>
+    <img ng-style="temp1BottomStyle" ng-src="{{temp1Src.bottom}}">
+    <img ng-style="temp1Side1Style" ng-src="{{temp1Src.side1}}">
+    <img ng-style="temp1Side2Style" ng-src="{{temp1Src.side2}}">
+    <img ng-style="temp1Side3Style" ng-src="{{temp1Src.side3}}">
+  </div>
+
+  <div ng-show="currentTemp == 'templates/temp2.html'">
+    <video ng-style="temp2VideoStyle" id='temp2Video' ng-src="{{temp2Src.video}}" ui-event="{ ended : 'temp2VideoEnd()'}" ></video>
+  </div>
+
+  <div ng-show="currentTemp == 'templates/temp3.html'">
+    <div class="weather" ng-style="temp3DivStyle">
+      <div class="head">
+        <div class="align-right">
+          <i class ="line-icon weather-icon" ng-class="now_weather.icon"></i>
+          <h3>{{now_weather.temp}}°C</h3>
+        </div>
+        <p>Today, Quezon City </p>
+      </div>
+      <div class="row footer">
+        <div class="col-sm-3 align-center" ng-if="$index >= 1" ng-repeat="c in conditions | limitTo: 5">
+          <h6>{{c.day}}</h6>
+          <i class ="line-icon blue" ng-class="c.icon"></i>
+          <h5>{{c.temp | number:0}}°</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="currentTemp == 'templates/temp4.html'">
+    <div ng-style="temp4DivStyle">
+      <!-- <div ng-style="temp4Text">Dolphins Everywhere</div> -->
+    </div>
+  </div>
+
+</body>
+
+  
+</html>

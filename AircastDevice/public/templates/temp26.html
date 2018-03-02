@@ -1,0 +1,35 @@
+<div class="instagram-post">
+	<div class="instagram-logo">
+		<img src="assets/instagram-logo.png">
+	</div>
+	<div class="insta-left clearfix">
+		<div class="insta-content">
+			<div class="insta-upper animated fadeInLeft delay-animation-1">
+				<p class="">{{ info.caption | cut:true:200:' ...' }}</p>
+				<span class="insta-date">{{info.insta_date}}</span>
+			</div>
+			<div class="insta-lower">
+				<div class="photo">
+					<img class="animated fadeInUp delay-animation-3" ng-src="{{ info.profile_pic }}">
+				</div>
+				<div class="name">
+					<h2 class="animated fadeInUp delay-animation-4">{{ info.username }}</h2>
+				</div>
+				<div class="follower">
+					<p class="animated fadeInUp delay-animation-5">{{ info.followers }} Followers</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="insta-right clearfix" ng-style="{'background-image': 'url(' + info.photo + ')'}">
+	</div>
+	<div class="insta-info animated pulse delay-animation-7">
+
+			<img ng-hide="info.likes == 0" src="assets/instagram-heart.png">
+			<p ng-hide="info.likes == 0" odometer="info.likes"></p>
+
+			<img  ng-hide="info.comments == 0" src="assets/instagram-comment.png">
+			<p ng-hide="info.comments == 0" odometer="info.comments"></p>
+
+	</div>
+</div>

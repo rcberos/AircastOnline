@@ -1,0 +1,136 @@
+.instagram-loader {
+  background: url("/assets/instagram-loader.jpg");
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+}
+.instagram-loader .loader {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.instagram-post {
+  background: #c2be9c;
+  width: 100vw;
+  height: 100vh;
+  font-size: 4vh;
+  color: white;
+  /*text-shadow: 0em 0.1em 0.1em rgba(0,0,0,.3);*/
+}
+.instagram-post .instagram-logo img {
+  width: 3em;
+  position: absolute;
+  right: 2em;
+  top: 2em;
+  animation: bob;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.instagram-post .insta-left {
+  width: 28vw;
+  float: left;
+  padding: 1em 0.5em 0.5em 1em;
+}
+.instagram-post .insta-left .insta-content {
+  height: 100vh;
+  background: #c2be9c;
+}
+.instagram-post .insta-left .insta-content:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: inherit;
+  z-index: 1;
+  top: -3em;
+  right: 0;
+  bottom: 0;
+  left: 12em;
+  transform-origin: top left;
+  transform: skewY(50deg) rotate(80deg);
+}
+.instagram-post .insta-left .insta-lower, .instagram-post .insta-left .insta-upper {
+  position: relative;
+  z-index: 2;
+}
+.instagram-post .insta-left .insta-upper {
+  height: 60vh;
+  font-family: 'Avenir';
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.instagram-post .insta-left .insta-upper p {
+  width: 100%;
+  line-height: 1.1em;
+  padding-top: 2.5em;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  word-wrap: break-word;
+}
+.instagram-post .insta-left .insta-upper .insta-date {
+  padding-top: 0em;
+  font-size: 0.5em;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+  background: #adadad;
+  /*margin-top: 4em;*/
+  padding: 0.2em 1em;
+  /*box-shadow: 0 0.1em 0.2em rgba(0,0,0,.1);*/
+  mix-blend-mode: multiply;
+}
+.instagram-post .insta-left .insta-lower {
+  text-align: center;
+  position: relative;
+  left: 1em;
+}
+.instagram-post .insta-left .insta-lower img {
+  width: 3em;
+  margin-bottom: 0.2em;
+  border-radius: 50%;
+}
+.instagram-post .insta-left .insta-lower h2 {
+  font-size: 2.3em;
+  border-bottom: 0.04em solid white;
+  margin-bottom: 0.08em;
+  text-transform: uppercase;
+  font-family: 'BebasNeue';
+}
+.instagram-post .insta-left .insta-lower p {
+  font-size: 1em;
+}
+.instagram-post .insta-right {
+  width: 72vw;
+  float: right;
+  height: 100vh;
+  background-position: top;
+  background-size: cover;
+}
+.instagram-post .insta-right img {
+  width: 72vw;
+  height: 100vh;
+}
+.instagram-post .insta-info {
+  position: absolute;
+  font-family: 'BebasNeue';
+  font-size: 1.3em;
+  z-index: 5;
+  bottom: 1em;
+  right: 1em;
+  text-shadow: 0em 0.1em 0.1em rgba(0, 0, 0, .6);
+}
+.instagram-post .insta-info img {
+  float: left;
+  width: 2em;
+}
+.instagram-post .insta-info p {
+  float: left;
+  font-size: 1.7em;
+  margin-right: 0.5em;
+  margin-left: 0.2em;
+}

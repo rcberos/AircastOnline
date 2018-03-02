@@ -1,0 +1,56 @@
+  <div ng-show="currentTemp == 'templates/temp10.html'">
+    
+    
+  <div class="news-loader">
+      <div class="loader"></div>
+  </div>
+   
+    <div class="news news-animation" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.8)), url(' + news.featuredImage + ')'}">
+        <div class="news-upper">
+           <div class="header animated fadeInLeft">
+            <div class="news-header-div">
+                <span class="news-header-div-title">Headline</span>
+            </div>
+            <div class="news-headline">
+                <h1>{{ news.title }}</h1>
+            </div>
+            <hr class="divider" />
+            <div class="news-author">
+                <h3>{{ news.author }}</h3>
+                <p>{{ news.dateCreated }}</p>
+            </div>
+            <div class="news-description">
+                <p>{{ news.description  | cut:true:200:' ...' }}</p>
+            </div>         
+           </div>
+
+        </div>
+        <div class="news-aside">
+           
+           <div class="news-source-div animated fadeInDown delay-animation-2 animation-duration-1">
+               <img class="news-source" ng-src="{{ news.sourceIcon }}">         
+           </div>
+
+           
+            <div class="upcoming-news">
+              <div class="news-aside-div animated fadeInRight delay-animation-2 animation-duration-1">
+                  <span class="news-aside-div-title">Upcoming Articles</span>
+              </div>
+                <div class="news-item animated fadeInRight delay-animation-4 super-delay-1">
+                    <h1>{{ news.article1.title }}</h1>
+                    <p>{{ news.article1.author }}</p>
+                </div>
+                <hr class="divider-bottom animated fadeInUp delay-animation-9">
+                <div class="news-item animated fadeInRight delay-animation-5 super-delay-2">
+                    <h1>{{ news.article2.title }}</h1>
+                    <p>{{ news.article2.author }}</p>
+                </div>
+                <hr class="divider-bottom animated fadeInUp delay-animation-9">
+                <div class="news-item animated fadeInRight delay-animation-6 super-delay-3">
+                    <h1>{{ news.article3.title }}</h1>
+                    <p>{{ news.article3.author }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

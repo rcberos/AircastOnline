@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Example - example-$route-service-production</title>
+<!-- 
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lora" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Khand:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+
+  <link rel="stylesheet" type="text/css" href="css/symbolicon.css">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
+<!--   <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/weather-icons.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+  <!--   <link rel="stylesheet" type="text/css" href="css/symbolset/line_fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/weather.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+
+
+
+  <!-- <link rel="stylesheet" type="text/css" href="css/portraitCss.css"> -->
+  
+
+
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/angular-ui-bootstrap.min.js"></script>
+  <script src="scripts/angular-ui-bootstrap-tpls.min.js"></script>
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/ratings.js"></script>
+  <script src="scripts/underscore.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+
+  <script type="text/javascript" src="scripts/typed.js"></script>
+
+   <script type="text/javascript" src="scripts/moment.js"></script>
+
+  <script src="scripts/allTemp.js"></script>
+  <script src="scripts/getData.js"></script>
+
+  <script src="scripts/RpiAngular2.js"></script>
+  <script type="text/javascript" src="scripts/angular-ui-event/dist/event.js"></script>
+
+  <script src="scripts/angular-animate.js"></script>
+  <script src="scripts/require.js"></script>
+
+</head>
+<body ng-app="MainModule" ng-controller="MainController">
+
+
+  <div ng-show="currentTemp == 'templates/temp1.html'">
+    <video ng-style="temp1VideoStyle" id='temp1Video' ui-event="{ ended : 'temp1VideoEnd()'}" muted></video>
+    <img ng-style="temp1BottomStyle" ng-src="{{temp1Src.bottom}}">
+    <img ng-style="temp1Side1Style" ng-src="{{temp1Src.side1}}">
+    <img ng-style="temp1Side2Style" ng-src="{{temp1Src.side2}}">
+    <img ng-style="temp1Side3Style" ng-src="{{temp1Src.side3}}">
+  </div>
+
+  <div ng-show="currentTemp == 'templates/temp2.html'">
+    <video ng-style="temp2VideoStyle" id='temp2Video' ng-src="{{temp2Src.video}}" ui-event="{ ended : 'temp2VideoEnd()'}" ></video>
+  </div>
+
+  <div ng-show="currentTemp == 'templates/temp3.html'">
+    <div class="weather" ng-style="temp3DivStyle">
+      <div class="head">
+        <div class="align-right">
+          <i class ="line-icon weather-icon" ng-class="now_weather.icon"></i>
+          <h3>{{now_weather.temp}}°C</h3>
+        </div>
+        <p>Today, Quezon City </p>
+      </div>
+      <div class="row footer">
+        <div class="col-sm-3 align-center" ng-if="$index >= 1" ng-repeat="c in conditions | limitTo: 5">
+          <h6>{{c.day}}</h6>
+          <i class ="line-icon blue" ng-class="c.icon"></i>
+          <h5>{{c.temp | number:0}}°</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div ng-show="currentTemp == 'templates/temp4.html'">
+    <div ng-style="temp4DivStyle">
+      <!-- <div ng-style="temp4Text">Dolphins Everywhere</div> -->
+    </div>
+  </div>
+
+
+<!--   <div ng-show="currentTemp == 'templates/temp2.html'">
+    <video ng-style="temp2VideoStyle" id='temp2Video' ng-src="{{temp2Src.video}}" ui-event="{ ended : 'temp2VideoEnd()'}" ></video>
+  </div> -->
+
+    <div ng-show="currentTemp == 'templates/temp6.html'">
+    
+
+      <div class="video-template">
+    
+        <div class="video-text-top">
+          <h2>Text top</h2>
+        </div>
+        <div class="video-middle">
+          <video ng-style="temp6VideoStyle" id='temp6Video' ng-src="{{temp6Src.video}}" ui-event="{ ended : 'temp6VideoEnd()'}" muted>
+        </div>
+        <div class="video-text-bottom">
+          <h2>Text bottom</h2>
+        </div>
+
+      </div>
+
+
+    </div> <!-- end of temp 6 -->
+  
+
+  <div ng-show="currentTemp == 'templates/temp16.html'"> <!-- start of temp16 -->
+
+    <div class="upcoming-movies">
+  
+      <div class="movie-bg" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.8)), url(' + backdrop_path + ')'}"></div>
+
+      <div class="movie-logo animated fadeInUp delay-animation-5">
+        <img src="/assets/logo-tmdb.png">    
+      </div>
+
+      <div class="movie-content">
+        
+        <div class="movie-left">
+          <div class="movie-poster animated bounceInDown">
+            <img ng-src="{{poster_path}}" />
+          </div>  
+        </div>
+        <div class="movie-right">
+          <div class="movie-title animated {{ animation }} delay-animation-1">
+            <h3>{{ movieslist }}</h3>
+          </div>
+          <div class="movie-title animated {{ animation }} delay-animation-3">
+            <h1>{{ title }}</h1>
+          </div>
+          <div class="movie-description animated {{ animation }} delay-animation-4">
+            <h4>Synopsis:</h4>
+            <p>{{ description | cut:true:250:' ...'  }}</p>
+          </div>
+          <div class="movie-ratings animated {{ animation }} delay-animation-5">
+            <h2> <i class="fa fa-star-half-o" aria-hidden="true"></i> {{ vote_average }}</h2>
+          </div>
+          <div class="movie-release-date animated {{ animation }} delay-animation-6">
+            <h2> <i class="fa fa-calendar" aria-hidden="true"></i> {{ release_date }}</h2>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    
+  </div> <!-- end of temp 16 -->
+
+
+  <div ng-show="currentTemp == 'templates/temp17.html'"> <!-- start of temp17 -->
+    <div class="news-loader">
+      <div class="loader"></div>
+    </div>
+   
+    <div class="news-portrait news-animation" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.2)), url(' + news.featuredImage + ')'}">
+      
+           <div class="news-source-div animated fadeInDown delay-animation-2 animation-duration-1">
+               <img class="news-source" src="{{ news.sourceIcon }}">              
+           </div>
+
+        <div class="news-upper">
+           <div class="header animated fadeInLeft">
+            <div class="news-header-div">
+                <span class="news-header-div-title">HEADLINE</span>
+            </div>
+            <div class="news-headline">
+                <h1>{{ news.title }}</h1>
+            </div>
+            <hr class="divider" />
+            <div class="news-author">
+                <h3>{{ news.author }}</h3>
+                <p>{{ news.dateCreated }}</p>
+            </div>
+            <div class="news-description">
+                <p>{{ news.description  | cut:true:200:' ...' }}</p>
+            </div>         
+           </div>
+
+        </div>
+        <div class="news-aside">
+                     
+            <div class="upcoming-news">
+              <div class="news-aside-div animated fadeInRight delay-animation-2 animation-duration-1">
+                  <span class="news-aside-div-title">Upcoming Articles</span>
+              </div>
+                <div class="news-item animated fadeInRight delay-animation-4 super-delay-1">
+                    <h1>{{ news.article1.title }}</h1>
+                    <p>{{ news.article1.author }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  </div> <!-- end of temp 17 -->
+
+  <div ng-show="currentTemp == 'templates/temp18.html'"> <!-- start of temp18 -->
+    <div class="weather-loader">
+          <div class="loader"></div>
+      </div>
+         
+      <div class="weather-portrait" ng-style="{'background-image': 'url(' + weather_background + ')'}">
+          <div class="head">
+              
+      <!--         <audio controls autoplay hidden>
+                <source src="assets/images/sunny.mp3" type="audio/mpeg">
+              </audio>
+       -->
+              <div class="align-left">
+                  <i class="line-icon weather-icon animated" ng-class="now_weather.animation"></i>
+                  <h3 class="animated flipInY delay-animation-5">{{now_weather.temp}}°C</h3>
+              </div>
+              
+                 <div class="align-right animated fadeInUp delay-animation-9">
+      <!--               <p>"Let your smile change the world but don't let the world change your smile."</p>-->
+                 </div>   
+                 
+                  <p class="weather-location animated slideInRight delay-animation-1 duration-2">Today, {{ now_weather.location }} </p>
+                  <p class="weather-date animated slideInLeft delay-animation-2 duration-2">{{ now_weather.currentDate }}</p>  
+
+          </div>
+          <div id="footer-container">
+              <div id="footer-background" ng-style="{'background-image': 'url(' + weather_background + ')'}"></div>
+              <div class="row footer fadeInImage">
+                  <div class="col-sm-3 align-center" ng-if="$index >= 1" ng-repeat="c in conditions | limitTo: 4">
+                      <h6 class="animated fadeInUp delay-animation-4 duration-2">{{c.day}}</h6>
+                      <i class="line-icon blue animated fadeInUp delay-animation-5 duration-2" ng-class="c.icon"></i>
+                      <h5 class="animated fadeInUp delay-animation-6 duration-2">{{c.temp | number:0}}°</h5>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> <!-- end of temp 18 -->
+
+  <div ng-show="currentTemp == 'templates/temp20.html'"> <!-- start of temp20 -->
+    <div class="twitter-portrait">
+        
+        <div class="twitter-header">
+            <div class="twitter-header-bg">
+                <img src="assets/twitter-icon.png">
+                <h1>Top Trending Topics</h1>
+                <!-- <h2>{{ topHashtag }}</h2> -->
+            </div>
+        </div>
+        <div class="loader"></div>
+        <div class="twitter-body">
+            
+             <h1 class="hashtag-overlay">{{ topHashtag }}</h1>       
+        
+            <div class="tweet animated" id="currentTweet">
+                <div class="tweet-upper">
+                    <img src="{{ tweet.user.profile_image_url }}" >
+                    <h3>{{ name }}</h3>
+                    <h4>@{{ username }}</h4>
+                </div>
+                <div class="tweet-body">
+                    <p>{{ tweetTextPort }}</p>
+                </div>
+                <div class="tweet-footer clearfix">
+                       <div class="float-left">
+                            <img src="assets/twitter-retweet.png">
+                            <span>{{ tweet.retweet_count }}</span>
+                            <img src="assets/twitter-favorite.png">
+                            <span>{{ tweet.favorite_count }}</span>   
+                       </div>
+                        <div class="float-right">
+                            <p>{{ tweetDate }}</p>    
+                        </div> 
+                </div>
+            </div>
+            
+            <div class="tweet tweet-second animated" id="secondTweet">
+                <div class="tweet-upper">
+                    <img src="{{ nextTweet.user.profile_image_url }}" >
+                    <h3>{{ nextTweet.user.name }}</h3>
+                    <h4>@{{ nextTweet.user.screen_name }}</h4>
+                </div>
+                <div class="tweet-body">
+                    <p>{{ nextTweetText }}</p>
+                </div>
+                <div class="tweet-footer clearfix">
+                       <div class="float-left">
+                            <img src="assets/twitter-retweet.png">
+                            <span>{{ nextTweet.retweet_count }}</span>
+                            <img src="assets/twitter-favorite.png">
+                            <span>{{ nextTweet.favorite_count }}</span>   
+                       </div>
+                        <div class="float-right">
+                            <p>{{ nextTweetDate }}</p>    
+                        </div> 
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+  </div> <!-- end of temp 20 -->
+
+
+
+  <div ng-show="currentTemp == 'templates/temp22.html'"> <!-- start of temp22 -->
+    <div class="hugot-portrait">
+
+      <div class="hugot-background" ng-style="{'background-image': 'url(' + hugotBackground + ')'}"></div>
+        
+        <div class="border"></div>
+
+        <img src="assets/hugot-ornament.png" class="ornament-top">
+
+        <div class="hugot-text-container">
+             <h1 class="hugot-text animated flipInX">{{ hugotText }}</h1>
+        
+        </div>
+      <img src="assets/hugot-ornament.png" class="ornament-bottom">
+
+    </div>
+  </div> <!-- end of temp 22 -->
+
+
+
+  <div ng-show="currentTemp == 'templates/temp23.html'"> <!-- start of temp23 -->
+    <div class="restaurant-loader">
+        <div class="loader"></div>
+    </div>
+
+     
+      <div class="restaurant-portrait">
+       
+        <div class="restaurant-top" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.8)), url(' + data.featuredImage + ')'}">
+            <div class="restaurant-top-float animated fadeInLeft">
+                <p>Restaurants Nearby</p>
+            </div>
+            <div class="restaurant-top-div animated fadeInUp delay-animation-1">
+                <div class="restaurant-top-name">
+                    <h1 ng-cloak>{{data.name}}</h1>
+                </div>
+                <div class="restaurant-top-location">
+                    <h2 ng-cloak>{{data.address}}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="restaurant-bottom">
+            <div class="restaurant-bottom-distance clearfix">
+                <div class="distance-div animated fadeInUp delay-animation-2">
+                    <img src="assets/maps-and-flags.svg">
+                    <h2 ng-cloak>{{data.distance}}</h2>
+                </div>
+            </div>
+            <div class="restaurant-background clearfix">
+                <div class="restaurant-bottom-review animated fadeInUp delay-animation-3">
+                    <p class="category-heading">Cuisines</p>
+                    <p class="category-text" ng-cloak>{{data.cuisines}}
+                        <p>
+                </div>
+                <div class="restaurant-bottom-rating animated fadeInUp clearfix delay-animation-4">
+                    <h2 ng-cloak>{{data.rating}}</h2>
+                    <p class="star" id="rateYo" ng-cloak>{{data.rating}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </div> <!-- end of temp 23 -->
+
+  <div ng-show="currentTemp == 'templates/temp21.html'"> <!-- start of temp21 -->
+    <div class="upcoming-movies-portrait">
+        
+        <div class="movie-bg" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.8)), url(' + backdrop_path + ')'}"></div>
+
+        <div class="movie-logo animated delay-animation-5">
+          <img src="/assets/logo-tmdb.png">    
+        </div>
+        <div class="movie-title animated {{ animation }} delay-animation-1">
+          <h3>{{ movieslist }}</h3>
+        </div>
+
+        <div class="movie-content">
+          
+          <div class="movie-left">
+            <div class="movie-poster animated bounceInDown">
+              <img ng-src="{{poster_path}}" />
+            </div>  
+          </div>
+          <div class="movie-right">
+            <div class="movie-ratings animated {{ animation }} delay-animation-2">
+              <h2>{{ vote_average }}</h2>
+               <p class="star" id="movieRatingStar" ng-cloak>{{data.rating}}</p>
+            </div>
+            <div class="movie-title animated {{ animation }} delay-animation-3">
+              <h1>{{ title }}</h1>
+            </div>
+            <div class="movie-description animated {{ animation }} delay-animation-4">
+              <h4>Synopsis:</h4>
+              <p>{{ description | cut:true:250:' ...'  }}</p>
+            </div>
+
+      <!--      <div class="movie-release-date animated {{ animation }} delay-animation-6">
+              <h2> <i class="fa fa-calendar" aria-hidden="true"></i> {{ release_date }}</h2>
+            </div> -->
+          </div>
+
+        </div>
+
+      </div>
+  </div> <!-- end of temp 21 -->
+
+
+  <div ng-show="currentTemp == 'templates/temp19.html'"> <!-- start of temp19 -->
+    <div class="currency-portrait">
+        
+        <div class="currency-title">
+         <h1>Currency Exchange Rates</h1>   
+        </div>
+
+        <div class="currency-content">
+
+            <div class="euro animated fadeInUp delay-animation-1">
+                <div class="currency-top">
+                    <img src="assets/currency-euro.png">
+                    <span>Euro</span>
+                </div>
+                <div class="currency-middle">
+                    <h2>{{ todayEuro }}</h2>
+                </div>
+                <div class="currency-bottom">
+                    <img ng-src="{{ signs.euro }}" class="currency-footer-signs">
+                </div>
+            </div>
+
+            <div class="usd animated fadeInUp delay-animation-3">
+                <div class="currency-top">
+                    <img src="assets/currency-usd.png">
+                    <span>US Dollar</span>
+                </div>
+                <div class="currency-middle">
+                    <h2>{{ todayUsd }}</h2>
+                </div>
+                <div class="currency-bottom">
+                    <img ng-src="{{ signs.usd }}" class="currency-footer-signs">
+                </div>
+            </div>
+
+            <div class="yen animated fadeInUp delay-animation-5">
+                <div class="currency-top">
+                    <img src="assets/currency-yen.png">
+                    <span>JPY</span>
+                </div>
+                <div class="currency-middle">
+                    <h2>{{ todayYen }}</h2>
+                </div>
+                <div class="currency-bottom">
+                    <img ng-src="{{ signs.yen }}" class="currency-footer-signs">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </div> <!-- end of temp 19 -->
+
+
+
+  <div ng-show="currentTemp == 'templates/temp33.html'"> <!-- start of temp17 -->
+
+  </div> <!-- end of temp 17 -->
+
+</body>
+
+  
+</html>

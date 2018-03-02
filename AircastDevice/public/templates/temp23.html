@@ -1,0 +1,43 @@
+
+<div class="restaurant-loader">
+    <div class="loader"></div>
+</div>
+
+ 
+  <div class="restaurant-portrait">
+   
+    <div class="restaurant-top" ng-style="{'background-image': 'linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.8)), url(' + data.featuredImage + ')'}">
+        <div class="restaurant-top-float animated fadeInLeft">
+            <p>Restaurants Nearby</p>
+        </div>
+        <div class="restaurant-top-div animated fadeInUp delay-animation-1">
+            <div class="restaurant-top-name">
+                <h1 ng-cloak>{{data.name}}</h1>
+            </div>
+            <div class="restaurant-top-location">
+                <h2 ng-cloak>{{data.address}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="restaurant-bottom">
+        <div class="restaurant-bottom-distance clearfix">
+            <div class="distance-div animated fadeInUp delay-animation-2">
+                <img src="assets/maps-and-flags.svg">
+                <h2 ng-cloak>{{data.distance}}</h2>
+            </div>
+        </div>
+        <div class="restaurant-background clearfix">
+            <div class="restaurant-bottom-review animated fadeInUp delay-animation-3">
+                <p class="category-heading">Cuisines</p>
+                <p class="category-text" ng-cloak>{{data.cuisines}}
+                    <p>
+            </div>
+            <div class="restaurant-bottom-rating animated fadeInUp clearfix delay-animation-4">
+                <h2 ng-cloak>{{data.rating}}</h2>
+                <p class="star" id="rateYo" ng-cloak>{{data.rating}}</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
